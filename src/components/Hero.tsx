@@ -75,7 +75,7 @@ export function Hero() {
           variants={itemVariants} 
           className="flex justify-center gap-8 mb-12"
         >
-          {[
+          {[ 
             { Icon: GithubIcon, href: socialLinks.github, label: "GitHub" },
             { Icon: LinkedinIcon, href: socialLinks.linkedin, label: "LinkedIn" },
             { Icon: MailIcon, href: `mailto:${socialLinks.email}`, label: "Email" }
@@ -109,8 +109,9 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
+      {/* Centralizando a seta */}
       <motion.div 
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-12 left-0 right-0 flex justify-center"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >

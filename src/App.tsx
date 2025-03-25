@@ -5,7 +5,6 @@ import { Hero } from './components/Hero';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
 import { Timeline } from './components/Timeline';
-import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
 import { Cursor } from './components/Cursor';
 import { LoadingScreen } from './components/LoadingScreen';
@@ -35,7 +34,6 @@ function App() {
           <Skills />
           <Projects />
           <Timeline />
-          <Testimonials />
           <Footer />
         </main>
       </div>

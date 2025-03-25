@@ -6,7 +6,7 @@ const skills = [
   {
     category: "Frontend",
     icon: Layout,
-    items: ["React","Electron", "TypeScript", "Next.js", "Tailwind CSS", "Redux"],
+    items: ["React","Electron", "TypeScript", "Next.js", "Tailwind CSS",],
     color: "from-blue-500 to-cyan-500"
   },
   {
@@ -18,13 +18,13 @@ const skills = [
   {
     category: "Database",
     icon: Database,
-    items: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Firebase"],
+    items: ["PostgreSQL", "MongoDB",  "MySQL", "Firebase"],
     color: "from-purple-500 to-pink-500"
   },
   {
     category: "DevOps",
     icon: Terminal,
-    items: ["Docker", "AWS", "CI/CD", "Linux", "Kubernetes"],
+    items: ["Docker", "Linux",],
     color: "from-orange-500 to-red-500"
   }
 ];

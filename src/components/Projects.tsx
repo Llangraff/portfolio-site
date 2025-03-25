@@ -21,7 +21,8 @@ export function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 auto-rows-auto">
+        {/* Usando flex para garantir que os projetos fiquem um abaixo do outro */}
+        <div className="flex flex-col gap-10">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}

@@ -4,12 +4,19 @@ import { GradientText } from './shared/GradientText';
 
 const timeline = [
   {
-    year: "2023",
-    title: "Graduação em Analise e Desenvolvilmento de Sistemas",
+    year: "2022 - 2025",
+    title: "Graduação em Análise e Desenvolvimento de Sistemas",
     company: "Unipar",
-    description: "",
+    description: "Início do curso de Análise e Desenvolvimento de Sistemas, com conclusão prevista para 2025.",
+    icon: GraduationCap,
+  },
+  {
+    year: "2022 - 2024",
+    title: "Estágio na Prefeitura",
+    company: "Prefeitura de Rondon",
+    description: "Início do estágio em desenvolvimento de sistemas, atuando com a gestão de dados e soluções tecnológicas.",
     icon: Briefcase,
-  }
+  },
 ];
 
 export function Timeline() {
@@ -65,7 +72,8 @@ export function Timeline() {
                   </div>
                 </div>
                 <p className="text-gray-600">{item.description}</p>
-                <div className="absolute top-6 text-sm font-bold text-blue-500">
+                {/* Ajustando o posicionamento dos números */}
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-500">
                   {item.year}
                 </div>
               </motion.div>

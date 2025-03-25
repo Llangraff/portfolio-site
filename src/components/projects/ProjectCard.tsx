@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 import { Badge } from '../shared/Badge';
 
 interface ProjectCardProps {
@@ -8,8 +8,9 @@ interface ProjectCardProps {
     description: string;
     image: string;
     tags: string[];
-    github: string;
+    github?: string;
     demo?: string;
+    contactMessage?: string;
     featured?: boolean;
   };
   index: number;
@@ -40,16 +41,18 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           transition={{ duration: 0.3 }}
         />
         <div className="absolute inset-0 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <motion.a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-4 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Github className="w-6 h-6 text-blue-500" />
-          </motion.a>
+          {project.github && (
+            <motion.a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-white rounded-full hover:scale-110 transition-transform shadow-lg"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Github className="w-6 h-6 text-blue-500" />
+            </motion.a>
+          )}
           {project.demo && (
             <motion.a
               href={project.demo}
@@ -96,6 +99,20 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </motion.div>
           ))}
         </div>
+
+        {/* Centralizando o texto de "Entrar em contato" */}
+        {project.contactMessage && (
+          <motion.div
+            className="flex justify-center items-center mt-4"
+          >
+            <a
+              href="mailto:contato@seuemail.com"
+              className="px-6 py-3 bg-blue-500 text-white rounded-full text-lg hover:bg-blue-600 transition-colors"
+            >
+              {project.contactMessage}
+            </a>
+          </motion.div>
+        )}
       </div>
     </motion.div>
   );
